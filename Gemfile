@@ -2,8 +2,7 @@
 
 source "https://rubygems.org"
 
-# Remove cause chirpy is now a regular theme
-# gem "jekyll-theme-chirpy", "~> 5.1", ">= 5.1.0"
+gem "jekyll-theme-chirpy", "~> 5.1", ">= 5.1.0"
 
 group :test do
   gem "html-proofer", "~> 3.18"
