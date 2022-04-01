@@ -16,38 +16,38 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Asia/Ho_Chi_Minh
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: to^'s Blogs                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Student, CTFer, web warrior   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  to^ blog, student at university of infomation and technology, VNU-HCM
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://to016.github.io/'
 
 github:
-  username: github_username             # change to your github username
+  username: to016            # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: nguyendt0            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@doamin.com             # change to your email address
+  name: Tô Đỉnh Nguyên
+  email: todinhnguyen1610@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://twitter.com/nguyendt0      # change to your twitter homepage
+    - https://github.com/to016     # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://www.facebook.com/tdn1610
     # - https://www.linkedin.com/in/username
 
 google_site_verification:               # fill in to your verification string
@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://avatars.githubusercontent.com/u/77546253?v=4
 
 # boolean type, the global switch for ToC in posts.
 toc: true
