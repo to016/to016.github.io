@@ -21,7 +21,7 @@ timezone: Asia/Ho_Chi_Minh
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: to^'s Blogs                          # the main title
+title: to^ Blogs                          # the main title
 
 tagline: Student, CTFer, web warrior   # it will display as the sub-title
 
@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/77546253?v=4
+avatar: ./assets/img/avatar.jpeg
 
 # boolean type, the global switch for ToC in posts.
 toc: true

@@ -1,20 +1,20 @@
 ---
-title: Blind regex injection
+title: Regex Master
 description: From webhacking.kr
 author: to^
 date: 2022-04-02 2:39:00 +0700
-categories: [WecSec, CTF]
+categories: [WecSec, CTF, webhacking.kr]
 tags: [timing attack, blind attack]     # TAG names should always be lowercase
 img_path: /assets/img/
 image:
  src: blind_re_inject/webhackingkr_logo.png
  alt: webhackingkr logo
- w: 1000
- h: 200
+ width: 1000
+ height: 1000
 ---
 
 ## _Link challenge_
-http://regexmaster.webhacking.kr
+<http://regexmaster.webhacking.kr>
 
 ## _Source code_
 ![source_code](blind_re_inject/source_code.png)
@@ -107,9 +107,7 @@ if __name__ == '__main__':
     print("[+] Flag: {}".format(flag))  
 ```
 
-```
-hahaa
-
-```
-**flag: FLAG{im_r/e/g/e/x_master//_//}**
-
+> FLAG{im_r/e/g/e/x_master//_//}
+{: .prompt-info  }
+## _Tham khảo_
+<https://diary.shift-js.info/blind-regular-expression-injection>
