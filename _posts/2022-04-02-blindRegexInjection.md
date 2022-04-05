@@ -1,5 +1,5 @@
 ---
-title: Regex Master
+title: Regex Master - webhacking.kr
 description: From webhacking.kr
 author: to^
 date: 2022-04-02 2:39:00 +0700
@@ -10,7 +10,7 @@ image:
  src: blind_re_inject/webhackingkr_logo.png
  alt: webhackingkr logo
  width: 1000
- height: 1000
+ height: 400
 ---
 
 ## _Link challenge_

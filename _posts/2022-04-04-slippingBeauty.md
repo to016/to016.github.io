@@ -1,5 +1,5 @@
 ---
-title: Slipping beauty
+title: Slipping beauty - webhacking.kr
 description: From webhacking.kr
 author: to^
 date: 2022-04-04 12:58:00 +0700
@@ -10,7 +10,7 @@ image:
  src: slipping_beauty/webhackingkr_logo.png
  alt: webhackingkr logo
  width: 1000
- height: 1000
+ height: 400
 ---
 
 ## _Link challenge_
