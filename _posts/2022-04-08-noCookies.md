@@ -33,21 +33,22 @@ _create note option_
 
 ## _Phân tích_
 ### 1. XSS qua markdown option
-Đọc qua source code thì ta thấy phần lớn các trang view.html, register.html đều thuộc dạng client side rendering
+Đọc qua source code thì thấy phần lớn các trang view.html, register.html đều thuộc dạng client side rendering
 ![markdown note handler](no_cookies/md_handler.png)
 _markdown note hander_
 
-Điều đáng chú ý ở đoạn code này là nếu note ta nhập vào có dạng `[blabla](test)` thì sẽ return thẻ a: `<a href = "test">blabla</a>`
-Từ đây ta có thể dễ dàng khai thác XSS: ta dùng 2 thuộc tính autofocus và onfocus để trigger nó
+Điều đáng chú ý ở đoạn code này là nếu note nhập vào có dạng `[blabla](test)` thì sẽ return thẻ a: 
+`<a href = "test">blabla</a>`
+Từ đây có thể dễ dàng khai thác XSS: ta dùng 2 thuộc tính autofocus và onfocus để trigger nó
 ```
 <a href ="test" autofocus onfocus= "alert`1">
 ```
-Điều đáng buồn là khi ta tạo note:
+Điều đáng buồn là khi tạo note:
 `(foo)[http://example.com" autofocus=autofocus onfocus="alert(password&#x29;]`
-(ở đây ta escape `)` trở thành `&#x29;` để cho regex không làm mất đi `)`)
+(ở đây escape `)` trở thành `&#x29;` để cho regex không làm mất đi `)` )
 Gửi note và ấn view xuất hiện pop-up `undefined` 😟
 
-Quay lại source code ta thấy rằng `const password`, được định nghĩa trong một anonymous arrow function và đoạn code được thực thi bên ngoài nó (đến từ HTML event handler)
+Quay lại source code thấy rằng `const password`, được định nghĩa trong một anonymous arrow function và đoạn code được thực thi bên ngoài nó (đến từ HTML event handler)
 
 Nhìn lại source, để ý cách validate password:
 ```js
@@ -55,7 +56,7 @@ const validate = (text) => {
 return /^[^$']+$/.test(text ?? '');
 }
 ```
-Chỉ đơn giản là kiểm ra sao cho phải có tối thiểu 1 kí tự và không tồn tại `'` hoặc `$`
+Chỉ đơn giản là kiểm tra sao cho phải có tối thiểu 1 kí tự và không tồn tại `'` hoặc `$`
 Mình tìm được một thứ thú vụ về [Regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input). Đại khái là: `RegExp.input` hoặc `RegExp.$_` sẽ trả về chuỗi match với regular expression.
 
 Ví dụ:
@@ -69,7 +70,7 @@ re.test('hi world!'); // new test, matching
 RegExp.$_; // "hi world!"
 ```
 
-Nhưng tất cả những `.replace()` call từ markdown parsing đã làm thay đổi giá trị của nó (overiding the password) vì vậy ta không thể khai thác thông qua markdown note -> chỉ còn lại con đường plain note.
+Nhưng tất cả những `.replace()` call từ markdown parsing đã làm thay đổi giá trị của nó (overiding the password) vì vậy không thể khai thác thông qua markdown note -> chỉ còn lại con đường plain note.
 ### 2. XSS qua plain option
 ![database handler code1](no_cookies/db_handler1.png)
 _database handler code1_
@@ -79,7 +80,7 @@ _database handler code2_
 
 Ta có thể thấy trước khi chèn vào DB, note bị replace `<` và `>` gây khó khăn cho việc khai thác.
 
-Nhưng `prepare function` đã giải quyết vấn đề này cho ta, hàm này đơn giản chỉ là replace **lần lượt** `:id, :username, :note, :mode` thành các giá trị tương ứng với nó.
+Nhưng `prepare function` đã giải quyết vấn đề này, hàm này đơn giản chỉ là replace **lần lượt** `:id, :username, :note, :mode` thành các giá trị tương ứng với nó.
 ```
 {
 id: "12345",
