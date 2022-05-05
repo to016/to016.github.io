@@ -3,7 +3,7 @@ title: PHP POP Chain
 description: Just a series for php pop chain exploition  
 author: to^
 date: 2022-04-22 22:27:00 +0700
-categories: [WecSec, CTF]
+categories: [WebSec, CTF]
 tags: [pop chain]     # TAG names should always be lowercase
 img_path: /assets/img/
 image:

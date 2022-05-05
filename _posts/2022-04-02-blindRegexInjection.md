@@ -3,8 +3,8 @@ title: Regex Master - webhacking.kr
 description: From webhacking.kr
 author: to^
 date: 2022-04-02 2:39:00 +0700
-categories: [WecSec, CTF, webhacking.kr]
-tags: [timing attack, blind attack]     # TAG names should always be lowercase
+categories: [WebSec, CTF, webhacking.kr]
+tags: [timing attack]     # TAG names should always be lowercase
 img_path: /assets/img/
 image:
  src: blind_re_inject/webhackingkr_logo.png
@@ -23,7 +23,7 @@ _source code_
 ## _Phân tích_
 Ở bài này source code rất đơn giản, chỉ kiểm tra xem biến flag có chứa chuỗi `parttern` (nhận từ GET request) hay không mà không hề xuất ra kết quả hay output nào khác.
 Sau một hồi suy nghĩ thì mình quyết định thử khai thác bằng `blind regex injection` + `timing attack`
-Để hiểu chi tiết hơn về kĩ thuật này các bạn có thể [đây](https://diary.shift-js.info/blind-regular-expression-injection/)
+Để hiểu chi tiết hơn về kĩ thuật này các bạn có thể xem [đây](https://diary.shift-js.info/blind-regular-expression-injection/).
 
 ## _Khai thác_
 ```py
