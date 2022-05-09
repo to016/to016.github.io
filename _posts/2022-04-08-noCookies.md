@@ -3,7 +3,7 @@ title: NoCookies - DiceCTF2022
 description: From DiceCTF2022
 author: to^
 date: 2022-04-08 13:07:00 +0700
-categories: [WebSec, CTF, DiceCTF2022]
+categories: [WebSec, CTF]
 tags: [sqli, xss]     # TAG names should always be lowercase
 img_path: /assets/img/
 image:

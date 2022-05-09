@@ -3,7 +3,7 @@ title: Slipping beauty - webhacking.kr
 description: From webhacking.kr
 author: to^
 date: 2022-04-04 12:58:00 +0700
-categories: [WebSec, CTF, webhacking.kr]
+categories: [WebSec, CTF]
 tags: [path traversal]     # TAG names should always be lowercase
 img_path: /assets/img/
 image:
