@@ -5,6 +5,7 @@ author: to^
 date: 2022-05-10 23:43:00 +0700
 categories: [WebSec, CTF]
 tags: [xss,service worker]     # TAG names should always be lowercase
+comments: true
 img_path: /assets/img/SWandMITM
 image:
  src: cyber.jpg
